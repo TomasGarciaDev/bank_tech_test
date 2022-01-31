@@ -1,5 +1,7 @@
 class Account
+  
   attr_reader :account
+  
   def initialize
     @account = []
     @balance = 0
@@ -11,20 +13,20 @@ class Account
   end
 
   def withdrawal(amount, date)
-    fail 'Sorry, not enough funds' if enough_funds?(amount)
-    amount <= @balance
+    raise 'Sorry, not enough funds' if enough_funds?(amount)
+    
     @balance -= amount
     @account.push("#{date} || || #{'%.2f' % amount} || #{'%.2f' % @balance}")
   end
 
   def statement
-      @account << "date || credit || debit || balance"
+    @account << 'date || credit || debit || balance'
     @account.reverse.map do |movement|
       movement
     end
   end
 
-  private 
+  private
 
   def enough_funds?(amount)
     amount > @balance
