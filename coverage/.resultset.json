@@ -1,7 +1,48 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/tomasgarciamusic/Desktop/Makers/Week_10/bank_tech_test/spec/account_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tomasgarciamusic/Desktop/Makers/Week_10/bank_tech_test/lib/account.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      }
     },
-    "timestamp": 1643630494
+    "timestamp": 1643633172
   }
 }
