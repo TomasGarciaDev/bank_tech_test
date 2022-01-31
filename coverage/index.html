@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-31T15:13:53+01:00">2022-01-31T15:13:53+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-31T15:53:28+01:00">2022-01-31T15:53:28+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  92.11%
+  93.18%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.37
+         1.36
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>38</b> relevant lines,
-    <span class="green"><b>35</b> lines covered</span> and
+    <b>44</b> relevant lines,
+    <span class="green"><b>41</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  92.11%
+  93.18%
 </span>
 )
   </div>
@@ -72,23 +72,23 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#03fb6e68ea685e2946402421f136cc4a6669e304" class="src_link" title="lib/account.rb">lib/account.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">82.35 %</td>
-            <td class="cell--number">26</td>
+            <td class="yellow strong cell--number t-file__coverage">85.00 %</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">20</td>
             <td class="cell--number">17</td>
-            <td class="cell--number">14</td>
             <td class="cell--number">3</td>
-            <td class="cell--number">1.82</td>
+            <td class="cell--number">1.75</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#13c84ee257ed1467d48ed02a4a4f530bd1f79ce2" class="src_link" title="spec/account_spec.rb">spec/account_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">32</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">21</td>
+            <td class="cell--number">37</td>
+            <td class="cell--number">24</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.04</td>
             
           </tr>
         
@@ -114,7 +114,7 @@
     <h3>lib/account.rb</h3>
     <h4>
       <span class="yellow">
-  82.35%
+  85.0%
 </span>
 
       lines covered
@@ -123,8 +123,8 @@
     
 
     <div class="t-line-summary">
-      <b>17</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>20</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>3</b> lines missed.</span>
     </div>
 
@@ -169,8 +169,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="4">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="6" data-linenumber="4">
+            <span class="hits">6</span>
             
 
             
@@ -180,8 +180,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="5">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="6" data-linenumber="5">
+            <span class="hits">6</span>
             
 
             
@@ -246,18 +246,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="11">
-            <span class="hits">4</span>
-            
-
-            
-
-            <code class="ruby">    @account</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
@@ -268,7 +257,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -279,7 +268,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
+          <li class="covered" data-hits="1" data-linenumber="13">
             <span class="hits">1</span>
             
 
@@ -290,13 +279,24 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="2" data-linenumber="14">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    fail &#39;Sorry, not enough funds&#39; if enough_funds?(amount)</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="covered" data-hits="1" data-linenumber="15">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    @balance -= amount</code>
+            <code class="ruby">    amount &lt;= @balance</code>
           </li>
         </div>
       
@@ -307,7 +307,7 @@
 
             
 
-            <code class="ruby">    @account.push(&quot;#{date} || || #{&#39;%.2f&#39; % amount} || #{&#39;%.2f&#39; % @balance}&quot;)</code>
+            <code class="ruby">    @balance -= amount</code>
           </li>
         </div>
       
@@ -318,7 +318,7 @@
 
             
 
-            <code class="ruby">    @account</code>
+            <code class="ruby">    @account.push(&quot;#{date} || || #{&#39;%.2f&#39; % amount} || #{&#39;%.2f&#39; % @balance}&quot;)</code>
           </li>
         </div>
       
@@ -417,6 +417,72 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def enough_funds?(amount)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="30">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    amount &gt; @balance</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
             <code class="ruby">end</code>
           </li>
         </div>
@@ -440,8 +506,8 @@
     
 
     <div class="t-line-summary">
-      <b>21</b> relevant lines.
-      <span class="green"><b>21</b> lines covered</span> and
+      <b>24</b> relevant lines.
+      <span class="green"><b>24</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -795,6 +861,61 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="33">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;should not allow the client to make a withdrawal with a date when is no funds&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="34">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    my_account = Account.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="35">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    expect{ my_account.withdrawal(500, &quot;14/01/2023&quot;) }.to raise_error &#39;Sorry, not enough funds&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
             
             
 

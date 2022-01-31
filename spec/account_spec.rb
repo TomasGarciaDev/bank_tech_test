@@ -29,4 +29,9 @@ describe 'Account' do
     my_account.withdrawal(500, "14/01/2023")
     expect(my_account.account).to eq(["10/01/2023 || 1000.00 || || 1000.00", "14/01/2023 || || 500.00 || 500.00"])
   end
+
+  it 'should not allow the client to make a withdrawal with a date when is no funds' do
+    my_account = Account.new
+    expect{ my_account.withdrawal(500, "14/01/2023") }.to raise_error 'Sorry, not enough funds'
+  end
 end

@@ -8,13 +8,13 @@ class Account
   def deposit(amount, date)
     @balance += amount
     @account.push("#{date} || #{'%.2f' % amount} || || #{'%.2f' % @balance}")
-    @account
   end
 
   def withdrawal(amount, date)
+    fail 'Sorry, not enough funds' if enough_funds?(amount)
+    amount <= @balance
     @balance -= amount
     @account.push("#{date} || || #{'%.2f' % amount} || #{'%.2f' % @balance}")
-    @account
   end
 
   def statement
@@ -22,5 +22,11 @@ class Account
     statement << header
 
     statement
+  end
+
+  private 
+
+  def enough_funds?(amount)
+    amount > @balance
   end
 end
