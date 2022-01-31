@@ -34,4 +34,15 @@ describe 'Account' do
     my_account = Account.new
     expect{ my_account.withdrawal(500, "14/01/2023") }.to raise_error 'Sorry, not enough funds'
   end
+
+  it 'should allow the client to print a statement' do
+    my_account = Account.new
+    my_account.deposit(1000, "10/01/2023")
+    my_account.deposit(2000, "13/01/2023")
+    my_account.withdrawal(500, "14/01/2023")
+    expect(my_account.statement).to include("date || credit || debit || balance")
+    expect(my_account.statement).to include("10/01/2023 || 1000.00 || || 1000.00")
+    expect(my_account.statement).to include("13/01/2023 || 2000.00 || || 3000.00")
+    expect(my_account.statement).to include("14/01/2023 || || 500.00 || 2500.00")
+  end
 end

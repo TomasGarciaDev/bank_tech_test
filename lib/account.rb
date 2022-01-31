@@ -18,10 +18,10 @@ class Account
   end
 
   def statement
-    header = "date || credit || debit || balance"
-    statement << header
-
-    statement
+      @account << "date || credit || debit || balance"
+    @account.reverse.map do |movement|
+      movement
+    end
   end
 
   private 
