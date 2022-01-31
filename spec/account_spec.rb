@@ -7,13 +7,12 @@ describe 'Account' do
 
   it 'should return an empty bank statement when first initliazed' do
     my_account = Account.new
-    expect(my_account.account).to be_nil
+    expect(my_account.account).to be_empty
   end
 
-  # it 'should allow the client to make deposits with a date' do
-  #   my_account = Account.new
-  #   my_account.deposit(500, "10-01-2023")
-    
-  #   expect(my_account.statement).to eq(statement)
-  # end
+  it 'should allow the client to make deposits with a date' do
+    my_account = Account.new
+    my_account.deposit(1000, "10/01/2023")
+    expect(my_account.account).to eq(["10/01/2023 || 1000.00 || || 1000.00"])
+  end
 end
