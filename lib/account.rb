@@ -11,6 +11,12 @@ class Account
     @account
   end
 
+  def withdrawal(amount, date)
+    @balance -= amount
+    @account.push("#{date} || || #{'%.2f' % amount} || #{'%.2f' % @balance}")
+    @account
+  end
+
   def statement
     header = "date || credit || debit || balance"
     statement << header
