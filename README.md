@@ -38,6 +38,12 @@ How to use
 
 - On console write `irb -r ./lib/account.rb` to load the program.
 - Create and instance of your account, e.g. `my_account = Account.new`.
-- Interact with your account makind deposits (`my_account.deposit(500)`), withdraws (`my_account.withdrawal(200)`) and printing your stamentent when needed (`my_account.statement`).
+- Interact with your account making deposits (`my_account.deposit(500)`), withdraws (`my_account.withdrawal(200)`) and printing your stamentent when needed (`my_account.statement`).
 
 <img width="559" alt="Screenshot 2022-02-01 at 16 27 08" src="https://user-images.githubusercontent.com/86299300/151997758-bb4c5b1c-e199-4ae4-8c5d-4d63f174baa1.png">
+
+
+How to use
+----------
+
+My approach was based on a single class called "Account", where the user can make deposits, withdrawals, and print statements. I looked for edge cases, for example, the user can not do withdrawals if does not have enough funds. The date for each "movement" is automatically added so it does not need to do it manually.

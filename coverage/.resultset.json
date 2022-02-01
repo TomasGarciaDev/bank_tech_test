@@ -3,6 +3,8 @@
     "coverage": {
       "/Users/tomasgarciamusic/Desktop/Makers/Week_10/bank_tech_test/spec/account_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -63,6 +65,7 @@
           1,
           1,
           1,
+          null,
           null,
           null
         ]
@@ -71,8 +74,9 @@
         "lines": [
           null,
           null,
-          1,
           null,
+          null,
+          1,
           1,
           null,
           1,
@@ -112,6 +116,6 @@
         ]
       }
     },
-    "timestamp": 1643727285
+    "timestamp": 1643731016
   }
 }

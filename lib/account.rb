@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 # client account class
 
 class Account
-  
   attr_reader :account
-  
+
   def initialize
     @account = []
     @balance = 0
@@ -11,14 +12,14 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @account.push("#{date} || #{'%.2f' % amount} || || #{'%.2f' % @balance}")
+    @account.push("#{date} || #{'%.2f' % amount} || || #{format('%.2f', @balance)}")
   end
 
   def withdrawal(amount)
     raise 'Sorry, not enough funds' if enough_funds?(amount)
-    
+
     @balance -= amount
-    @account.push("#{date} || || #{'%.2f' % amount} || #{'%.2f' % @balance}")
+    @account.push("#{date} || || #{'%.2f' % amount} || #{format('%.2f', @balance)}")
   end
 
   def statement
@@ -35,6 +36,6 @@ class Account
   end
 
   def date
-    Time.now.strftime("%d/%m/%Y")
+    Time.now.strftime('%d/%m/%Y')
   end
 end

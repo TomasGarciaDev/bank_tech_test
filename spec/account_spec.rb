@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'account'
 
 describe 'Account' do
@@ -20,13 +22,13 @@ describe '#deposit' do
   end
 
   it 'should allow the client to make deposits with a date' do
-    date = Time.now.strftime("%d/%m/%Y")
+    date = Time.now.strftime('%d/%m/%Y')
     @my_account.deposit(1000)
     expect(@my_account.account).to eq(["#{date} || 1000.00 || || 1000.00"])
   end
 
   it 'should allow the client to make a deposits with a date' do
-    date = Time.now.strftime("%d/%m/%Y")
+    date = Time.now.strftime('%d/%m/%Y')
     @my_account.deposit(1000)
     @my_account.deposit(2000)
     expect(@my_account.account).to eq(["#{date} || 1000.00 || || 1000.00", "#{date} || 2000.00 || || 3000.00"])
@@ -39,7 +41,7 @@ describe '#withdrawl' do
   end
 
   it 'should allow the client to make a withdrawal with a date' do
-    date = Time.now.strftime("%d/%m/%Y")
+    date = Time.now.strftime('%d/%m/%Y')
     @my_account.deposit(1000)
     @my_account.withdrawal(500)
     expect(@my_account.account).to eq(["#{date} || 1000.00 || || 1000.00", "#{date} || || 500.00 || 500.00"])
@@ -52,11 +54,12 @@ end
 
 describe '#statement' do
   it 'should allow the client to print a statement' do
-    date = Time.now.strftime("%d/%m/%Y")
+    date = Time.now.strftime('%d/%m/%Y')
     my_account = Account.new
     my_account.deposit(1000)
     my_account.deposit(2000)
     my_account.withdrawal(500)
-    expect(my_account.statement).to eq(["#{date} || || 500.00 || 2500.00","#{date} || 2000.00 || || 3000.00", "#{date} || 1000.00 || || 1000.00"])
+    expect(my_account.statement).to eq(["#{date} || || 500.00 || 2500.00", "#{date} || 2000.00 || || 3000.00",
+                                        "#{date} || 1000.00 || || 1000.00"])
   end
 end
