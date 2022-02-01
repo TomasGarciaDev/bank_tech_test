@@ -2,13 +2,6 @@
 
 This is a small tech test base on recreating the interaction of a client/user with his/her bank account, putting in practice my OOD and TTD skills. I have used `Rspec` to Test Drive the development on `Ruby`, and `Rubocop` and `Simplecov` for writing clean code and tests.
 
-Steps
--------
-
-1. Fork this repo, and clone to your local machine
-2. Run the command `gem install bundler` (if you don't have bundler already)
-3. When the installation completes, run `bundle`.
-
 ### Requirements
 
 * You should be able to interact with your code via a REPL like IRB or Node. (You don't need to implement a command line interface that takes input from STDIN.)
@@ -31,7 +24,17 @@ date || credit || debit || balance
 10/01/2023 || 1000.00 || || 1000.00
 ```
 
-### How to use
+How to use
+----------
+
+### Setup
+
+
+1. Fork this repo, and clone to your local machine
+2. Run the command `gem install bundler` (if you don't have bundler already)
+3. When the installation completes, run `bundle`.
+
+### Interacting with your account
 
 - On console write `irb -r ./lib/account.rb` to load the program.
 - Create and instance of your account, e.g. `my_account = Account.new`
