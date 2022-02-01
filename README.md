@@ -43,7 +43,7 @@ How to use
 <img width="559" alt="Screenshot 2022-02-01 at 16 27 08" src="https://user-images.githubusercontent.com/86299300/151997758-bb4c5b1c-e199-4ae4-8c5d-4d63f174baa1.png">
 
 
-How to use
+Approach
 ----------
 
 My approach was based on a single class called "Account", where the user can make deposits, withdrawals, and print statements. I looked for edge cases, for example, the user can not do withdrawals if does not have enough funds. The date for each "movement" is automatically added so it does not need to do it manually.
