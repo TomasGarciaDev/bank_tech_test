@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 # client account class
-
+require_relative 'statement'
 class Account
-  attr_reader :account
+  attr_reader :statement
 
   def initialize
     @account = []
     @balance = 0
+    @statement = Statement.new(@account)
   end
 
   def deposit(amount)
@@ -20,13 +21,6 @@ class Account
 
     @balance -= amount
     @account.push("#{date} || || #{'%.2f' % amount} || #{format('%.2f', @balance)}")
-  end
-
-  def statement
-    puts 'date || credit || debit || balance'
-    @account.reverse.each do |movement|
-      puts movement
-    end
   end
 
   private
