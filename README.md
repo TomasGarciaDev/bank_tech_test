@@ -51,4 +51,4 @@ There are two classes:
 
 2. `Statement`, manages printing a statement with each movement and a header specifying each column.
 
-The functionality is based on each account is created when instantiated, this allows the user to make `deposits` and `withdrawals`. The program keeps track of the movements, with the date and the type of movement. Users can print statements whenever is needed, for this, the `Account` class uses the `Statement` class by injection.
+The functionality is based on each account is created when instantiated, this allows the user to make `deposits` and `withdrawals`. The user can not do `withadrawls` if he/she does not have enough funds. The program keeps track of the movements, with the date and the type of movement. Users can print statements whenever is needed, for this, the `Account` class uses the `Statement` class by injection.
