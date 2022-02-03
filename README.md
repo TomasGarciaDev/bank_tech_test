@@ -40,8 +40,7 @@ How to use
 - Create and instance of your account, e.g. `my_account = Account.new`.
 - Interact with your account making deposits (e.g `my_account.deposit(500)`), withdraws (e.g `my_account.withdrawal(200)`) and printing your stamentent when needed (`my_account.statement.print`).
 
-<img width="559" alt="Screenshot 2022-02-01 at 16 27 08" src="https://user-images.githubusercontent.com/86299300/151997758-bb4c5b1c-e199-4ae4-8c5d-4d63f174baa1.png">
-
+<img width="572" alt="Screenshot 2022-02-03 at 12 58 57" src="https://user-images.githubusercontent.com/86299300/152338694-4d5edfd5-fb34-4a49-bfdc-2133e214ca5a.png">
 
 Approach
 ----------
