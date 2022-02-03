@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
+# print statement class
 class Statement
   def initialize(account)
-    @account = account 
+    @account = account
   end
 
   def print

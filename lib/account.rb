@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-# client account class
 require_relative 'statement'
+
+# client account class
 class Account
-  attr_reader :statement
+  attr_reader :account, :statement
 
   def initialize
     @account = []

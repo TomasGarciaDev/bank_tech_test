@@ -2,7 +2,7 @@
 
 require 'account'
 
-describe 'Account' do
+describe Account do
   before do
     @my_account = Account.new
   end
@@ -49,17 +49,5 @@ describe '#withdrawl' do
 
   it 'should not allow the client to make a withdrawal with a date when is no funds' do
     expect { @my_account.withdrawal(500) }.to raise_error 'Sorry, not enough funds'
-  end
-end
-
-describe '#statement' do
-  it 'should allow the client to print a statement' do
-    date = Time.now.strftime('%d/%m/%Y')
-    my_account = Account.new
-    my_account.deposit(1000)
-    my_account.deposit(2000)
-    my_account.withdrawal(500)
-    expect(my_account.statement).to eq(["#{date} || || 500.00 || 2500.00", "#{date} || 2000.00 || || 3000.00",
-                                        "#{date} || 1000.00 || || 1000.00"])
   end
 end
